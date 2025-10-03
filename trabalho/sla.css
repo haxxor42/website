@@ -1,0 +1,44 @@
+ body {
+ 
+    text-align: center;
+  
+  }
+  
+  fieldset{
+    display: inline-block;
+      background-color: rgb(212, 207, 181);/*se apagar deixa transparente*/
+   border: 1px solid rgb(156, 121, 69); /* Adiciona uma borda para visualização */
+    border-radius: 10px; /* Arredonda todos os cantos */
+  
+  margin-top: 500px;
+  padding: 25px;
+  width: 300px; 
+  }
+  
+  input {
+    display: block;
+    width: 250px; 
+    margin-left: auto;
+    margin-right: auto;
+  padding: 18px;
+  border-radius: 10px; /* Arredonda todos os cantos */
+  border: 1px solid rgb(156, 121, 69); 
+  background-color: rgb(243, 239, 233);
+
+
+  }
+  h1{
+  margin-top: 100px;
+      color: azure;
+  
+  }
+
+  button {
+
+    border-radius: 10px; 
+    border: 1px solid rgb(156, 121, 69); 
+padding: 10px;
+width: 90px;
+font-size: 16px;
+background-color: rgb(243, 239, 233);
+  }

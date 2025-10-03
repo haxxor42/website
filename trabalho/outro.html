@@ -1,0 +1,73 @@
+ <!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<script type="text/javascript" src="sla.js" defer></script>
+<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<script type="text/javascript" src="outro.js" defer></script>
+
+
+</head>
+<body>
+
+<h1> Bem Vindo ao </h1>
+
+<audio id="meuAudio">
+    <source src="miau-triste.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+</audio>
+
+
+<button id="toggleButton">
+    <i class="bx bx-play" id="iconeBotao"></i>
+</button>
+
+
+<button id="pauseButton">
+    <i class="bx bx-pause"></i>
+</button>
+<script>
+    const audio = document.getElementById('meuAudio');
+    const toggleButton = document.getElementById('toggleButton');
+    const icone = document.getElementById('iconeBotao');
+    const pauseButton = document.getElementById('pauseButton');
+
+    // Botão toggle (play/pause alternando)
+    toggleButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            icone.classList.remove('bx-play');
+            icone.classList.add('bx-pause');
+        } else {
+            audio.pause();
+            icone.classList.remove('bx-pause');
+            icone.classList.add('bx-play');
+        }
+    });
+
+    // Botão pause separado
+    pauseButton.addEventListener('click', () => {
+        audio.pause();
+        // Garante que o botão de toggle volte para ícone de play
+        icone.classList.remove('bx-pause');
+        icone.classList.add('bx-play');
+    });
+</script>
+
+
+
+    <button id="desconectar">Sair</button>
+
+    <style>
+        body { 
+          background-image: url("2.jpg");
+          background-repeat: no-repeat; /* Evita que a imagem seja repetida */
+          background-size: cover; /* Ajusta a imagem para cobrir o fundo */
+         
+          
+        }
+    </style>
+
+</body>
+</html>
