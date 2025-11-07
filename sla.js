@@ -1,4 +1,4 @@
- const tagnome = document.querySelector("#nome");
+const tagnome = document.querySelector("#nome");
 const tagemail = document.querySelector("#email");
 const tagsenha = document.querySelector("#senha");
 const btncadastrar = document.querySelector("#cadastrar");
@@ -7,6 +7,7 @@ const tagloginemail = document.querySelector("#emaillogin");
 const tagloginsenha = document.querySelector("#senhalogin");
 const tagbtnlogin = document.querySelector("#Login");
 
+const btniniciar = document.querySelector("#inicio");
 const btnsair = document.querySelector("#desconectar");
 //const exibirnome = document.querySelector("#exibirusuario");
 
@@ -36,9 +37,8 @@ cadastrar.push(usuario);
 
 localStorage.setItem("usuario" , JSON.stringify(cadastrar));
 
+Swal.fire('Cadastro', 'Cadastro realizado com sucesso!', 'success');
 
-console.log("usuario cadastrado")
-console.log(cadastrar)
 }
 
 tagemail.value = "";
@@ -77,4 +77,10 @@ btnsair.addEventListener("click", function(){
     localStorage.removeItem("usuariologado");
 usuariologado = null;
 window.location.href = "sla.html";
-})}
+})
+
+btniniciar.addEventListener("click", function(){
+    window.location.href = "quiz.html";
+})
+
+}
