@@ -58,12 +58,24 @@ const existe = cadastrar.find(function(usuario){
     })
 
    if(existe) {
-         alert("Você fez login");
-         logado = { nome: existe.nome , email: existe.email};
-         localStorage.setItem("usuariologado", JSON.stringify(logado));
-         window.location.href = "outro.html";
+    Swal.fire({
+        title: "Login",
+        text: "Login realizado com sucesso!",
+        icon: "success"
+      }).then((result) => {
+        
+        logado = { nome: existe.nome , email: existe.email};
+        localStorage.setItem("usuariologado", JSON.stringify(logado));
+        window.location.href = "outro.html";
+
+      })
+    
    }else{
-         alert("Usúario não encontrado");
+    Swal.fire({
+        title: "Usuário não encontrado",
+        text: "Login não realizado!",
+        icon: "warning"
+      });
    }
 
 })
@@ -74,7 +86,7 @@ const existe = cadastrar.find(function(usuario){
 
 if(window.location.pathname.endsWith("outro.html")){
 btnsair.addEventListener("click", function(){
-    localStorage.removeItem("usuariologado");
+localStorage.removeItem("usuariologado");
 usuariologado = null;
 window.location.href = "sla.html";
 })
